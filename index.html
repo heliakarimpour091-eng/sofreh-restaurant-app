@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -7,24 +8,52 @@
 </head>
 <body>
 
-<h1>منوی رستوران سفره</h1>
+    <h1>منوی رستوران سفره</h1>
 
-<label for="category-filter">دسته‌بندی غذا:</label>
+    <label for="category-filter">دسته‌بندی غذا:</label>
+    <select id="category-filter">
+        <option value="">همه دسته‌بندی‌ها</option>
+    </select>
 
-<select id="category-filter">
-    <option value="">همه دسته‌بندی‌ها</option>
-</select>
+    <br><br>
 
-<br><br>
+    <label>
+        <input type="checkbox" id="vegetarian-filter">
+        فقط غذاهای گیاهی
+    </label>
 
-<label>
-    <input type="checkbox" id="vegetarian-filter">
-    فقط غذاهای گیاهی
-</label>
+    <br><br>
 
-<div id="menu-container"></div>
+    <label for="search-input">جست‌وجوی غذا:</label>
+    <input
+        type="text"
+        id="search-input"
+        placeholder="نام غذا را وارد کنید..."
+    >
+
+    <br><br>
+
+    <label for="sort-filter">مرتب‌سازی غذاها:</label>
+    <select id="sort-filter">
+        <option value="">بدون مرتب‌سازی</option>
+        <option value="price">ارزان‌ترین</option>
+        <option value="-price">گران‌ترین</option>
+        <option value="-rating">بالاترین امتیاز</option>
+    </select>
+
+    <br><br>
 
     <div id="menu-container"></div>
+
+
+<div id="pagination">
+    <button id="prev-button" disabled>صفحه قبلی</button>
+    <span id="page-info">صفحه ۱</span>
+    <button id="next-button">صفحه بعدی</button>
+</div>
+
+
     <script src="script.js"></script>
+
 </body>
 </html>
